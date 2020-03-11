@@ -1,0 +1,9 @@
+## Interface: 11303
+## Title: PajMinimapArrow
+## Notes: smaller minimap arrow from https://opengameart.org/content/glow-arrow
+## Author: Pajlada
+## DefaultState: enabled
+## LoadOnDemand: 0
+## Version: 1.0.0
+
+main.lua
