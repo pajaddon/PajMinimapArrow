@@ -5,5 +5,7 @@
 ## DefaultState: enabled
 ## LoadOnDemand: 0
 ## Version: 1.0.0
+## SavedVariables: Size
 
+helpers.lua
 main.lua
