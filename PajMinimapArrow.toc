@@ -4,7 +4,7 @@
 ## Author: Pajlada
 ## DefaultState: enabled
 ## LoadOnDemand: 0
-## Version: 1.0.0
+## Version: 1.0.2
 ## SavedVariables: Size
 
 helpers.lua
