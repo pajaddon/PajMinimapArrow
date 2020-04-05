@@ -1,4 +1,4 @@
-## Interface: 11303
+## Interface: 11304
 ## Title: PajMinimapArrow
 ## Notes: smaller minimap arrow from https://opengameart.org/content/glow-arrow
 ## Author: Pajlada
