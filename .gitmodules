@@ -1,0 +1,3 @@
+[submodule "utils/packager"]
+	path = utils/packager
+	url = https://github.com/BigWigsMods/packager

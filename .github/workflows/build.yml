@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: make script executable
+      run: chmod +x utils/packager/release.sh
+
+    - name: Create Retail Package
+      run: ./utils/packager/release.sh
+      env:
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
+
+    - name: Create Classic Package
+      run: ./utils/packager/release.sh -g 1.13.4
+      env:
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
