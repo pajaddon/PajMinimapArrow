@@ -18,13 +18,16 @@ jobs:
       run: ./utils/packager/release.sh -g retail
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Create Classic Package
       run: ./utils/packager/release.sh -g classic
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Create Classic Burning Crusade Package
       run: ./utils/packager/release.sh -g bcc
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
