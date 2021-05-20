@@ -14,15 +14,17 @@ jobs:
       with:
         submodules: true
 
-    - name: make script executable
-      run: chmod +x utils/packager/release.sh
-
     - name: Create Retail Package
-      run: ./utils/packager/release.sh
+      run: ./utils/packager/release.sh -g retail
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
     - name: Create Classic Package
-      run: ./utils/packager/release.sh -g 1.13.4
+      run: ./utils/packager/release.sh -g classic
+      env:
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
+
+    - name: Create Classic Burning Crusade Package
+      run: ./utils/packager/release.sh -g bcc
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
