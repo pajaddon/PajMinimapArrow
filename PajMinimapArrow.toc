@@ -1,7 +1,9 @@
-## Interface: 90005
-## Interface-BCC: 20502
-## Interface-Classic: 11307
+## Interface: 90200
+## Interface-BCC: 20504
+## Interface-Classic: 11403
 ## X-Curse-Project-ID: 366766
+## X-WoWI-ID: 26301
+## X-Wago-ID: BO67wo63
 ## Title: PajMinimapArrow
 ## Notes: smaller minimap arrow from https://opengameart.org/content/glow-arrow
 ## Author: Pajlada

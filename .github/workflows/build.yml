@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,17 +20,23 @@ jobs:
     - name: Create Retail Package
       run: ./utils/packager/release.sh -g retail
       env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+        CF_API_KEY: ${{ secrets.CF_API_TOKEN }}
+        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+        WAGO_API_TOKEN: ${{ secrets.WAGO_API_KEY }}
+        GITHUB_OAUTH: ${{ github.token }}
 
     - name: Create Classic Package
       run: ./utils/packager/release.sh -g classic
       env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+        CF_API_KEY: ${{ secrets.CF_API_TOKEN }}
+        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+        WAGO_API_TOKEN: ${{ secrets.WAGO_API_KEY }}
+        GITHUB_OAUTH: ${{ github.token }}
 
     - name: Create Classic Burning Crusade Package
       run: ./utils/packager/release.sh -g bcc
       env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+        CF_API_KEY: ${{ secrets.CF_API_TOKEN }}
+        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+        WAGO_API_TOKEN: ${{ secrets.WAGO_API_KEY }}
+        GITHUB_OAUTH: ${{ github.token }}
